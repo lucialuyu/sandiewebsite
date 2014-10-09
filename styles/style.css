@@ -6,8 +6,8 @@
 #wowslider-container { 
 	zoom: 1; 
 	position: relative; 
-	max-width:580px;
-	margin:0 auto;
+	max-width:82%;
+	margin:15px auto 0;
 	z-index:100;
 	border:none;
 	text-align:left; /* reset align=center */
@@ -152,7 +152,7 @@
 @-moz-keyframes wsBasic{0%{left:-0%} 16.67%{left:-0%} 33.33%{left:-100%} 50%{left:-100%} 66.67%{left:-200%} 83.33%{left:-200%} }
 @-webkit-keyframes wsBasic{0%{left:-0%} 16.67%{left:-0%} 33.33%{left:-100%} 50%{left:-100%} 66.67%{left:-200%} 83.33%{left:-200%} }
 
-#wowslider-container .ws_shadow{
+/*#wowslider-container .ws_shadow{
 	background: url(./shadow.png) left 100%;
 	background-repeat: no-repeat;
 	background-size:100%;
@@ -162,7 +162,7 @@
 	left:0;
 	bottom:-20%;
 	z-index:-1;
-}
+}*/
 * html #wowslider-container .ws_shadow{/*ie6*/
 	background:none;
 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='wowslider/install/shadow.png', sizingMethod='scale');
