@@ -2,77 +2,80 @@
 <html>
     <head>
     <!--js-->
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="js/unslider.min.js"></script>
+    <!-- Start WOWSlider.com HEAD section -->
+	<link rel="stylesheet" type="text/css" href="styles/style.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<!-- End WOWSlider.com HEAD section -->
+    <!--css-->
+    <link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
     <style>
-        .banner {
-        position: relative;
-        width: 90%;
-        overflow: auto;
-
-        font-size: 18px;
-        line-height: 24px;
-        text-align: center;
-
-        color: rgba(255,255,255,.6);
-        text-shadow: 0 0 1px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.3);
-
-        background: #5b4d3d;
-        box-shadow: 0 1px 2px rgba(0,0,0,.25);
+        @font-face {
+            font-family: 'geotica_2012regular';
+            src: url('font/geotica_2012.eot');
+            src: url('font/geotica_2012.eot?#iefix') format('embedded-opentype'),
+             url('font/geotica_2012.woff2') format('woff2'),
+             url('font/geotica_2012.woff') format('woff'),
+             url('font/geotica_2012.ttf') format('truetype'),
+             url('font/geotica_2012.svg#geotica_2012regular') format('svg');
+            font-weight: normal;
+            font-style: normal;
         }
-        .banner ul {
-        list-style: none;
-        width: 300%;
+        h1, h2, h3, h4, h5, h6, h7 {
+            font-family: 'geotica_2012regular', fantasy;
         }
-        .banner ul li {
-        display: block;
-        float: left;
-        width: 33%;
-        padding: 160px 0 110px;
-
-        min-height: 350px;
-
-        /*-webkit-background-size: 100% 100%;*/
-        -moz-background-size: 100% 100%;
-        -o-background-size: 100% 100%;
-        -ms-background-size: 100% 100%;
-        /*		background-size: 100% 100%;*/
-
-        box-shadow: inset 0 -3px 6px rgba(0,0,0,.1);
+        
+        h1 {
+            font-size: 2em;
+            text-decoration: underline;
+            padding-bottom: 0px;
+            margin: 80px auto 0px;
+            line-height: 35px;
         }
-        .banner .dots {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 20px;
+        
+        #tagline {
+            margin-top: 0px;
+            padding-top: 0px;
+            font-family: sans-serif;
         }
-        .banner .dots li {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        margin: 0 4px;
-
-        text-indent: -999em;
-
-        border: 2px solid #fff;
-        border-radius: 6px;
-
-        cursor: pointer;
-        opacity: .4;
-
-        -webkit-transition: background .5s, opacity .5s;
-        -moz-transition: background .5s, opacity .5s;
-        transition: background .5s, opacity .5s;
+        
+        header {
+            text-align: center;
         }
-        .banner .dots li.active {
-            background: #fff;
-            opacity: 1;
+        
+        nav {
+            background-color: rgb(180, 164, 164);
+            border-radius: 10px;
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+        }
+        
+        nav>ul {
+            list-style-type: none;
+            padding: 5px 0px;
+        }
+        
+        nav>ul li{
+            display: inline;
+            width: 20%;
+            padding: 0px 6%;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+        
+         nav a:hover {
+            color: yellow;
         }
     </style>
     </head>
     <body>
         <header>
             <h1>Sandie Chen</h1>
+            <span id="tagline">Photography</span>
             <nav>
                 <ul>
                     <li><a href="">Home</a></li>
@@ -84,30 +87,28 @@
             </nav>
         </header>
         <section id="content">
-        <div class="banner">
-            <ul>
-				<li style="background-image: url('img/slide1.png');">
-				</li>
-				<li>
-                    <img src="img/slide2.png">
-				</li>
-			</ul>
-        </div>
+            <!-- Start WOWSlider.com BODY section -->
+            <div id="wowslider-container">
+            <div class="ws_images"><ul>
+            <li><a href="http://www.wowslider.com/index.html#overview"><img src="img/slide1.png" alt="" title="" id="wows_0"/></a></li>
+            <li><a href="http://www.wowslider.com/demo.html"><img src="img/slide2.png" alt="You can add description to slides!" title="" id="wows_1"/></a></li>
+           
+            </ul></div>
+            <div class="ws_bullets"><div>
+            <a href="#" title="">1</a>
+            <a href="#" title="You can add description to slides!">2</a>
+            </div></div>
+                <a href="#" class="ws_frame"></a>
+                <div class="ws_shadow"></div>
+            </div>
+
+	<!-- End WOWSlider.com BODY section -->
         </section>
         
         <footer></footer>
         
         <!--script-->
-        <script>
-            if(window.chrome) {
-                $('.banner li').css('background-size', '100% 100%');
-            }
-
-            $('.banner').unslider({
-                fluid: true,
-                dots: true,
-                speed: 500
-            });
-        </script>
+        <script type="text/javascript" src="js/wowslider.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>
